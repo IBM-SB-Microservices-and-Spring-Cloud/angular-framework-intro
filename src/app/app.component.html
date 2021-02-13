@@ -1,15 +1,8 @@
-<p [ngClass]="{updated: title != 'My First App Started'}"> {{title}}</p>
+<div>
+  <span>
+    <a routerLink="/">Home</a></span>
+  <span><a routerLink="/blog">Blog</a></span>
+  <span><a routerLink="/account">Account</a></span>
+</div>
 
-<p *ngIf="isNameChanged()"> Name Updated</p>
-<button (click)="changeName()"> Change Name</button>
-<button (click)="addElement()"> Add Element</button>
-
-<ul>
-
-  <li *ngFor="let ele of elements" [id]="'element'+ele"
-  [style.background-color]="getColour(ele)"> Element {{ele}} </li>
-</ul>
-
-
-
-<app-username [username]="'Abdul Munaf'" (userClicked)="onUserWasClicked($event)" (userHbyClicked)="onUserHbyWasClicked($event)"></app-username>
+<router-outlet></router-outlet>
