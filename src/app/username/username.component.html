@@ -1,0 +1,29 @@
+<br /><br />
+
+<h3>Start of Username Module</h3>
+<p (click)="onUsernameClicked()">{{username}}</p>
+
+
+<input type="text" [(ngModel)]="message" />
+<p>{{message}}</p>
+
+
+<div>
+    <span>
+        <p (click)="onUserHbyClicked()">Hobbies</p>
+    </span>
+    <span><button (click)="addHobby()">Add Hobby</button></span>
+</div>
+<ul>
+
+    <li *ngFor="let hby of hobbies" [id]='hby.concat("_Id")' [style.background-color]="getHbyColour(hby)"> Hobby:
+        {{hby}} </li>
+</ul>
+
+
+
+<p> End Of Username Module</p>
+<br />
+
+
+<app-info></app-info>
